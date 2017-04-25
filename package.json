@@ -1,0 +1,15 @@
+{
+  "name": "react-progress-bar",
+  "version": "1.0.0",
+  "description": "A react progress bar implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Dwyer",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4"
+  }
+}
