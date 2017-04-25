@@ -16,3 +16,11 @@ class ProgressBar extends React.Component {
     </div>);
   }
 }
+
+ProgressBar.propTypes = {
+  min: PropTypes.number,
+  max: PropTypes.number,
+  current: PropTypes.number,
+  percent: PropTypes.number,
+  theme: PropTypes.string
+}
