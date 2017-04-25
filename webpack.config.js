@@ -1,14 +1,33 @@
+const path = require('path');
+
 const config = {
   entry: './index.js',
   output: {
     path: path.resolve('dist'),
     filename: 'progressbar-bundle.js',
     library: ['ProgressBar'],
-   libraryTarget: ‘umd’,
+   libraryTarget: 'umd',
   },
   module: {
-    loaders: [
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
+    rules: [
+      { test: /\.jsx$/, 
+        loader: {
+          loader: 'babel-loader', 
+          options: {
+            presets: ['es2015', 'react']
+          }
+        }, 
+        exclude: /node_modules/
+      },
+      { test: /\.js$/, 
+        loader: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015', 'react']
+          }
+        }, 
+        exclude: /node_modules/
+      }
     ]
   }
 }
