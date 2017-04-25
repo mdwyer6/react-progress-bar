@@ -1,4 +1,5 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
   entry: './index.js',
@@ -6,12 +7,12 @@ const config = {
     path: path.resolve('dist'),
     filename: 'progressbar-bundle.js',
     library: ['ProgressBar'],
-   libraryTarget: 'umd',
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
       { test: /\.jsx$/, 
-        loader: {
+        use: {
           loader: 'babel-loader', 
           options: {
             presets: ['es2015', 'react']
@@ -20,16 +21,26 @@ const config = {
         exclude: /node_modules/
       },
       { test: /\.js$/, 
-        loader: {
+        use: {
           loader: 'babel-loader',
           options: {
             presets: ['es2015', 'react']
           }
         }, 
         exclude: /node_modules/
+      },
+      { test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        }),
+        include: path.join(__dirname, '/styles/')
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('/progressbar-bundle.css')
+  ]
 }
 
 module.exports = config;

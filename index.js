@@ -1,12 +1,4 @@
-import ReactDOM from 'react-dom';
 import ProgressBar from './components/progressbar.jsx';
+const css = require('./styles/progressbar.scss');
 
-export default {
-  ProgressBar: {
-    render: () => {
-      ReactDOM.render(
-        <ProgressBar />
-      );
-    }
-  }
-}
+export default ProgressBar;
