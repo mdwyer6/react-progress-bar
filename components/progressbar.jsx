@@ -15,7 +15,6 @@ class ProgressBar extends React.Component {
       "default": 1,
       "arctic": 1,
       "cyber": 1,
-      "spartan": 1
     }
 
     let isValid = true;
