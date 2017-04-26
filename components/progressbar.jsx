@@ -67,7 +67,6 @@ class ProgressBar extends React.Component {
   }
 
   render() {
-    console.log(this.props.theme);
     if (this.validate()) {
       let percent = Math.round(this.toPercent(this.props.min, this.props.max, this.props.current)) || Math.round(this.props.percent);
       let theme = this.props.theme || 'default';
