@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`does not render when provided percent and min, max or current values 1`] = `null`;
+
+exports[`does not render when provided percent and min, max or current values 2`] = `null`;
+
+exports[`does not render when provided percent and min, max or current values 3`] = `null`;
+
+exports[`renders correctly 1`] = `
+<div
+  className="progress-bar-container default"
+>
+  <div
+    className="progress-bar-inner"
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    50
+    %
+  </div>
+</div>
+`;
+
+exports[`renders themes 1`] = `
+<div
+  className="progress-bar-container arctic"
+>
+  <div
+    className="progress-bar-inner"
+    style={
+      Object {
+        "width": "52%",
+      }
+    }
+  >
+    52
+    %
+  </div>
+</div>
+`;
+
+exports[`renders when min, max and current are used 1`] = `
+<div
+  className="progress-bar-container default"
+>
+  <div
+    className="progress-bar-inner"
+    style={
+      Object {
+        "width": "75%",
+      }
+    }
+  >
+    75
+    %
+  </div>
+</div>
+`;
+
+exports[`rounds non integer numbers 1`] = `
+<div
+  className="progress-bar-container default"
+>
+  <div
+    className="progress-bar-inner"
+    style={
+      Object {
+        "width": "52%",
+      }
+    }
+  >
+    52
+    %
+  </div>
+</div>
+`;
+
+exports[`will not render values outside range 1`] = `null`;
+
+exports[`will not render when values are not numbers 1`] = `null`;

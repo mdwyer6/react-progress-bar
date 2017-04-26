@@ -1,7 +1,7 @@
 //----------- Jest Tests -----------//
 
 import React from 'react';
-import ProgressBar from 'progressbar-bundle.js';
+import ProgressBar from '../dist/progressbar-bundle.js';
 import renderer from 'react-test-renderer';
 
 
@@ -46,26 +46,26 @@ it('will not render when values are not numbers', () => {
 
 it('renders themes', () => {
   const tree = renderer
-    .create(<ProgressBar percent={51.6573} theme{'arctic'} />)
+    .create(<ProgressBar percent={51.6573} theme={'arctic'} />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
 
 it('does not render when provided percent and min, max or current values', () => {
-  const tree = renderer
+  const tree1 = renderer
     .create(<ProgressBar percent={51} min={2} />)
     .toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree1).toMatchSnapshot();
 
-  const tree = renderer
+  const tree2 = renderer
     .create(<ProgressBar percent={51} max={2} />)
     .toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree2).toMatchSnapshot();
 
-  const tree = renderer
+  const tree3 = renderer
     .create(<ProgressBar percent={51} current={2} />)
     .toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree3).toMatchSnapshot();
 });
 
 
