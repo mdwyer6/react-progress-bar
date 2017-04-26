@@ -59,7 +59,6 @@ class ProgressBar extends React.Component {
     
     //Min > max when user wants progress to increase as current decreases e.g., time remaining
     if (min < max) {
-      console.log('number', ((current - min) / (max - min)) * 100);
       return ((current - min) / (max - min)) * 100;
     } else {
       return ((min - current) / (min - max)) * 100;
