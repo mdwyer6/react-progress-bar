@@ -13,7 +13,7 @@ class ProgressBar extends React.Component {
   validate() {
     const themes = {
       "default": 1,
-      "winter": 1,
+      "arctic": 1,
       "cyber": 1,
       "spartan": 1
     }
@@ -67,10 +67,12 @@ class ProgressBar extends React.Component {
   }
 
   render() {
+    console.log(this.props.theme);
     if (this.validate()) {
       let percent = Math.round(this.toPercent(this.props.min, this.props.max, this.props.current)) || Math.round(this.props.percent);
+      let theme = this.props.theme || 'default';
       return (
-        <div className={`progress-bar-container ${'default' || this.props.theme}`}>
+        <div className={`progress-bar-container ${theme}`}>
             <div className="progress-bar-inner" style={{width: `${percent}%`}}>{percent}%</div>
         </div>
       );
