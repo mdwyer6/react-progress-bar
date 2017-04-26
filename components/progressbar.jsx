@@ -60,6 +60,7 @@ class ProgressBar extends React.Component {
     
     //Min > max when user wants progress to increase as current decreases e.g., time remaining
     if (min < max) {
+      console.log('number', ((current - min) / (max - min)) * 100);
       return ((current - min) / (max - min)) * 100;
     } else {
       return ((min - current) / (min - max)) * 100;
@@ -68,8 +69,13 @@ class ProgressBar extends React.Component {
 
   render() {
     if (this.validate()) {
-      let percent = Math.round(this.toPercent(this.props.min, this.props.max, this.props.current)) || Math.round(this.props.percent);
       let theme = this.props.theme || 'default';
+      let percent;
+      if ((Math.round(this.toPercent(this.props.min, this.props.max, this.props.current))) === 0) {
+        percent = 0;
+      } else {
+        percent = Math.round(this.toPercent(this.props.min, this.props.max, this.props.current)) || Math.round(this.props.percent);
+      }
       return (
         <div className={`progress-bar-container ${theme}`}>
             <div className="progress-bar-inner" style={{width: `${percent}%`}}>{percent}%</div>
