@@ -1,1 +1,11 @@
 node_modules
+.gitignore
+components
+styles
+tests
+babel.rc
+index.js
+package.json
+webpack.config.js
+yarn.lock
+dist/progressbar-bundle.css
