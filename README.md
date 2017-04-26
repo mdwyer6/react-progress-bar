@@ -1,17 +1,17 @@
-#React Progress Bar
+# React Progress Bar
 
-##User Stories
+## User Stories
 * I can pass a min, max, and current prop value and a progress bar with default styling will be created
 * I can input nonsensical values for min, max, or current and an error will be written to the console
 * I can pass a value in the range 0 to 100 to the percent prop to create the progress bar
 * I can pass a new value for current to the component and it will update to reflect the changes
 * I can overwrite out of the box styles with my own
 
-##Installing
+## Installing
 Using yarn: `yarn add react-progress-bar`.
 Using npm: `npm install react-progress-bar --save`.
 
-##Using
+## Using
 There are two ways to use this progress bar. If you already know the percent value you'd like to display you can pass it to the component with the percent prop.
 ```
 <ProgressBar percent={15} />
@@ -24,10 +24,10 @@ Otherwise, pass the corresponding values to the min, max, and currentval props a
 
 Use the theme prop to specify a prebuilt theme. There are currently three available themes: "arctic", "cyber" and "default". The "default" is used when theme prop is not used.
 
-##Design choices
+## Design choices
 I've chosen to move most CSS to an external file to avoid FOUC and because it allows developers to overwrite with inline styles.
 
-##Improvements
+## Improvements
 * Min and max props could be more accurately called startVal and endVal
 * Allow component to fail silently in production
 * Host CSS file on CDN
