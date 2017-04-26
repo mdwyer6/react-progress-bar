@@ -13,6 +13,9 @@ Using npm: `npm install react-progress-bar --save`.
 
 Add this stylesheet to the head of your html document: `<link rel="stylesheet" type="text/css" href="https://s3-us-west-1.amazonaws.com/reactprogressbar/progressbar-bundle.css"></link>`
 
+## Demo
+Example application here: https://github.com/mdwyer6/react-progress-bar-demo
+
 ## Using
 There are two ways to use this progress bar. If you already know the percent value you'd like to display you can pass it to the component with the percent prop.
 ```
@@ -30,6 +33,7 @@ Use the theme prop to specify a prebuilt theme. There are currently three availa
 I've chosen to move most CSS to an external file to avoid FOUC and because it allows developers to overwrite with inline styles.
 
 ## Improvements
+* Get Jest tests to transpile correctly
 * Min and max props could be more accurately called startVal and endVal
 * Allow component to fail silently in production
 * Allow passing custom dimensions as props

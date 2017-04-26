@@ -8,3 +8,4 @@ index.js
 webpack.config.js
 yarn.lock
 dist/progressbar-bundle.css
+tests
