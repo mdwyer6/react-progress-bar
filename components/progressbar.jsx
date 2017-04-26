@@ -46,7 +46,7 @@ class ProgressBar extends React.Component {
         if (typeof this.props.min !== 'number' || typeof this.props.max !== 'number' || typeof this.props.current !== 'number') {
           isValid = false;
           console.log('The props min, max and current must all be numbers');
-        } else if ((Math.max(this.props.max, this.props.min) <= this.props.current) || (Math.min(this.props.max, this.props.min) >= this.props.current)) {
+        } else if ((Math.max(this.props.max, this.props.min) < this.props.current) || (Math.min(this.props.max, this.props.min) > this.props.current)) {
           isValid = false;
           console.log('The value passed to the current prop must be between the min and max props values (inclusive)');
         }
@@ -76,7 +76,7 @@ class ProgressBar extends React.Component {
         </div>
       );
     } else {
-      null;
+      return null;
     }
   }
 }
