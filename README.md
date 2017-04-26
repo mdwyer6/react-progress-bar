@@ -11,6 +11,8 @@
 Using yarn: `yarn add react-progress-bar`.
 Using npm: `npm install react-progress-bar --save`.
 
+Add this stylesheet to the head of your html document: `<link rel="stylesheet" type="text/css" href="https://s3-us-west-1.amazonaws.com/reactprogressbar/progressbar-bundle.css"></link>`
+
 ## Using
 There are two ways to use this progress bar. If you already know the percent value you'd like to display you can pass it to the component with the percent prop.
 ```
@@ -30,8 +32,8 @@ I've chosen to move most CSS to an external file to avoid FOUC and because it al
 ## Improvements
 * Min and max props could be more accurately called startVal and endVal
 * Allow component to fail silently in production
-* Host CSS file on CDN
 * Allow passing custom dimensions as props
 * Improve code coverage + automatic coverage reports/CI
 * Improve responsivenes
 * Improve progressbar aesthetics
+* Seperate DEV and PROD build code

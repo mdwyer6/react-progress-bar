@@ -1,5 +1,5 @@
 {
-  "name": "react-progress-bar",
+  "name": "react-progress-bar-component",
   "version": "1.0.0",
   "description": "A react progress bar implementation",
   "main": "index.js",
